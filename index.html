@@ -4,73 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrea Garcia | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="fade-in">Andrea Garcia</h1>
-            <h2 class="slide-up">Student Web Developer & Programmer</h2>
-            <p class="fade-in">I build apps and websites that are helpful to people and designed to make a positive impact on the world.</p>
-            <div class="hero-btns fade-in">
-                <a href="#projects" class="btn primary">View My Project</a>
-                <a href="#contact" class="btn secondary">Contact Me</a>
+    <header class="hero">
+        <div class="hero-content fade-in">
+            <h1 class="hero-name">Andrea Garcia</h1>
+            <h2 class="hero-title">Student Web Developer & Programmer</h2>
+            <p class="hero-intro">I build apps and websites that are helpful to people and designed to make a positive impact on the world.</p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">View My Project</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
             </div>
         </div>
-    </section>
+    </header>
 
-    <div class="container">
-        <section class="about" id="about">
-            <h3 class="section-title">About Me</h3>
-            <div class="card shadow">
+    <main class="container">
+        <section class="section about" id="about">
+            <h3 class="section-heading">About Me</h3>
+            <div class="glass-card fade-in">
                 <p>I am a student and self-taught developer who enjoys creating cute, user-friendly websites and apps. I love building projects that can help people in real life.</p>
             </div>
         </section>
 
-        <section class="skills">
-            <h3 class="section-title">Skills</h3>
-            <div class="skill-tags">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">Python</span>
-                <span class="tag">UI Design</span>
-                <span class="tag">GitHub Pages</span>
+        <section class="section skills">
+            <h3 class="section-heading">Skills</h3>
+            <div class="skill-cloud fade-in">
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">UI Design</span>
+                <span class="skill-tag">GitHub Pages</span>
             </div>
         </section>
 
-        <section class="projects" id="projects">
-            <h3 class="section-title">My Project ⭐</h3>
-            <div class="card project-card shadow">
-                <div class="project-info">
+        <section class="section projects" id="projects">
+            <h3 class="section-heading">My Project ⭐</h3>
+            <div class="project-card fade-in">
+                <div class="project-content">
                     <h4>Mina’s Menu</h4>
-                    <span class="project-type">Online Food Ordering Website</span>
+                    <span class="badge">Online Food Ordering Website</span>
                     <p>A functional food ordering website where users can browse a menu, choose items, and place orders easily. Designed with simplicity, usability, and real-world application in mind.</p>
-                    <a href="https://dreamediaenterprise-tech.github.io/minamenu./" target="_blank" class="btn live-btn">Live Demo</a>
+                    <a href="https://dreamediaenterprise-tech.github.io/minamenu./" target="_blank" class="live-demo-link">Live Demo →</a>
                 </div>
             </div>
         </section>
 
-        <section class="contact" id="contact">
-            <h3 class="section-title">Get in Touch</h3>
-            <div class="card contact-card shadow">
-                <div class="contact-item">
-                    <strong>📞 Phone:</strong> 0992 944 0921
+        <section class="section contact" id="contact">
+            <h3 class="section-heading">Get in Touch</h3>
+            <div class="contact-grid fade-in">
+                <div class="contact-card">
+                    <span class="icon">📞</span>
+                    <p>0992 944 0921</p>
                 </div>
-                <div class="contact-item">
-                    <strong>✉️ Email:</strong> dreamedia.enterprise@gmail.com
+                <div class="contact-card">
+                    <span class="icon">✉️</span>
+                    <p>dreamedia.enterprise@gmail.com</p>
                 </div>
-                <div class="contact-item">
-                    <strong>👤 Facebook:</strong> Andrea Garcia
+                <div class="contact-card">
+                    <span class="icon">👤</span>
+                    <p>Andrea Garcia</p>
                 </div>
             </div>
         </section>
-    </div>
+    </main>
 
-    <footer>
-        <p>Made with 💜 by Andrea Garcia</p>
+    <footer class="footer">
+        <p>Made with 💜 by <strong>Andrea Garcia</strong></p>
     </footer>
 
 </body>
