@@ -22,20 +22,20 @@ body {
     overflow-x: hidden;
 }
 
-.container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+.container { max-width: 950px; margin: 0 auto; padding: 0 24px; }
 
 /* REFINED TYPOGRAPHY */
 h1, h3, h4 { font-family: 'Playfair Display', serif; }
 .section-heading {
     font-size: 2.2rem;
     color: var(--dark);
-    margin-bottom: 32px;
+    margin-bottom: 40px;
     text-align: center;
 }
 
 /* HERO SECTION UPGRADE */
 .hero {
-    height: 90vh;
+    height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,8 +62,8 @@ h1, h3, h4 { font-family: 'Playfair Display', serif; }
 .btn-outline { border: 2px solid var(--primary); color: var(--primary); }
 .btn:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(147, 112, 219, 0.25); }
 
-/* SPACING & CARDS */
-.section { padding: 80px 0; }
+/* SECTION SPACING */
+.section { padding: 100px 0; }
 .glass-card {
     background: white;
     padding: 40px;
@@ -72,7 +72,7 @@ h1, h3, h4 { font-family: 'Playfair Display', serif; }
     border: 1px solid rgba(147, 112, 219, 0.05);
 }
 
-/* SKILL TAGS UPGRADE */
+/* SKILL TAGS */
 .skill-cloud { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
 .skill-tag {
     background: var(--white);
@@ -85,30 +85,71 @@ h1, h3, h4 { font-family: 'Playfair Display', serif; }
 }
 .skill-tag:hover { background: var(--primary); color: white; border-color: var(--primary); }
 
-/* PROJECT CARD UPGRADE */
+/* PROJECT CARD */
 .project-card {
-    max-width: 700px;
+    max-width: 750px;
     margin: 0 auto;
     background: white;
     border-radius: 24px;
     padding: 40px;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    text-align: center;
 }
 .project-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(147, 112, 219, 0.15); }
 .project-content h4 { font-size: 1.8rem; margin-bottom: 8px; color: var(--dark); }
-.badge { font-size: 0.75rem; background: var(--lavender); color: var(--primary); padding: 4px 12px; border-radius: 4px; font-weight: 600; }
+.badge { font-size: 0.75rem; background: var(--accent); color: var(--primary); padding: 4px 12px; border-radius: 4px; font-weight: 600; }
 .project-content p { margin: 20px 0; }
 .live-demo-link { color: var(--primary); text-decoration: none; font-weight: 600; border-bottom: 2px solid transparent; transition: var(--transition); }
 .live-demo-link:hover { border-bottom: 2px solid var(--primary); }
 
-/* CONTACT CARDS */
-.contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-.contact-card { background: white; padding: 24px; border-radius: 20px; text-align: center; box-shadow: var(--shadow); }
-.contact-card .icon { font-size: 1.5rem; display: block; margin-bottom: 8px; }
+/* UPDATED CONTACT GRID FOR PERFECT ALIGNMENT */
+.contact-grid { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 24px; 
+    margin-top: 20px;
+}
+
+.contact-card { 
+    background: white; 
+    padding: 30px; 
+    border-radius: 24px; 
+    text-align: center; 
+    box-shadow: var(--shadow); 
+    flex: 1;
+    min-width: 260px; 
+    max-width: 300px;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 15px 35px rgba(147, 112, 219, 0.15);
+}
+
+.contact-card .icon { 
+    font-size: 2rem; 
+    display: block; 
+    margin-bottom: 12px; 
+}
+
+.contact-card p {
+    font-weight: 500;
+    word-break: break-word;
+    color: var(--text-main);
+}
 
 /* FOOTER */
-.footer { padding: 60px 0; text-align: center; opacity: 0.7; }
+footer { 
+    padding: 80px 0 40px; 
+    text-align: center; 
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
 
 /* ANIMATIONS */
 .fade-in { animation: fadeIn 1.2s ease-out; }
@@ -116,7 +157,8 @@ h1, h3, h4 { font-family: 'Playfair Display', serif; }
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 600px) {
-    .hero-name { font-size: 2.4rem; }
+    .hero-name { font-size: 2.5rem; }
     .section-heading { font-size: 1.8rem; }
-    .glass-card, .project-card { padding: 24px; }
+    .glass-card, .project-card, .contact-card { padding: 24px; }
+    .hero { height: auto; padding: 100px 20px; }
 }
