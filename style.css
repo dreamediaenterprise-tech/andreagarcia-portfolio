@@ -1,0 +1,154 @@
+/* Color Variables */
+:root {
+    --lavender: #E6E6FA;
+    --soft-purple: #9370DB;
+    --dark-purple: #4B0082;
+    --white: #ffffff;
+    --text: #444;
+    --bg: #fdfbff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Animations */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+.fade-in { animation: fadeIn 1.5s ease-out; }
+.slide-up { animation: slideUp 1s ease-out; }
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #f3e5f5 0%, #e1f5fe 100%);
+    padding: 20px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: var(--dark-purple);
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-weight: 400;
+    color: var(--soft-purple);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 500px;
+    margin: 0 auto 30px;
+}
+
+/* Buttons */
+.btn {
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: 0.3s;
+    display: inline-block;
+    margin: 5px;
+}
+
+.primary { background: var(--soft-purple); color: white; }
+.secondary { border: 2px solid var(--soft-purple); color: var(--soft-purple); }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(147, 112, 219, 0.3); }
+
+/* Card Styles */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin: 50px 0 20px;
+    color: var(--dark-purple);
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.shadow {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Skill Tags */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background: var(--lavender);
+    color: var(--dark-purple);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Projects */
+.project-card {
+    border-left: 5px solid var(--soft-purple);
+}
+
+.project-type {
+    display: block;
+    color: var(--soft-purple);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.live-btn {
+    background: #f3e5f5;
+    color: var(--dark-purple);
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* Contact Card */
+.contact-item {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 50px;
+    color: #888;
+}
+
+/* Mobile Friendly */
+@media (max-width: 600px) {
+    .hero h1 { font-size: 2.5rem; }
+}
