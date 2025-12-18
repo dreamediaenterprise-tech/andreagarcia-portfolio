@@ -22,7 +22,7 @@ body {
     overflow-x: hidden;
 }
 
-.container { max-width: 950px; margin: 0 auto; padding: 0 24px; }
+.container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
 
 /* REFINED TYPOGRAPHY */
 h1, h3, h4 { font-family: 'Playfair Display', serif; }
@@ -33,7 +33,7 @@ h1, h3, h4 { font-family: 'Playfair Display', serif; }
     text-align: center;
 }
 
-/* HERO SECTION UPGRADE */
+/* HERO SECTION */
 .hero {
     height: 85vh;
     display: flex;
@@ -48,7 +48,7 @@ h1, h3, h4 { font-family: 'Playfair Display', serif; }
 .hero-title { font-weight: 400; color: var(--primary); font-size: 1.4rem; margin-bottom: 24px; }
 .hero-intro { max-width: 550px; margin: 0 auto 32px; font-size: 1.05rem; color: var(--text-light); }
 
-/* REFINED BUTTONS */
+/* BUTTONS */
 .btn {
     text-decoration: none;
     padding: 14px 32px;
@@ -62,8 +62,8 @@ h1, h3, h4 { font-family: 'Playfair Display', serif; }
 .btn-outline { border: 2px solid var(--primary); color: var(--primary); }
 .btn:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(147, 112, 219, 0.25); }
 
-/* SECTION SPACING */
-.section { padding: 100px 0; }
+/* SECTIONS */
+.section { padding: 80px 0; }
 .glass-card {
     background: white;
     padding: 40px;
@@ -97,32 +97,38 @@ h1, h3, h4 { font-family: 'Playfair Display', serif; }
     text-align: center;
 }
 .project-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(147, 112, 219, 0.15); }
+
 .project-content h4 { font-size: 1.8rem; margin-bottom: 8px; color: var(--dark); }
 .badge { font-size: 0.75rem; background: var(--accent); color: var(--primary); padding: 4px 12px; border-radius: 4px; font-weight: 600; }
 .project-content p { margin: 20px 0; }
 .live-demo-link { color: var(--primary); text-decoration: none; font-weight: 600; border-bottom: 2px solid transparent; transition: var(--transition); }
 .live-demo-link:hover { border-bottom: 2px solid var(--primary); }
 
-/* UPDATED CONTACT GRID FOR PERFECT ALIGNMENT */
+/* CONTACT SECTION - FIXED ALIGNMENT & RESPONSIVE TEXT */
 .contact-grid { 
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center; 
+    align-items: stretch;
     gap: 24px; 
-    margin-top: 20px;
+    margin: 30px auto;
+    max-width: 100%;
 }
 
 .contact-card { 
     background: white; 
-    padding: 30px; 
+    padding: 35px 20px; 
     border-radius: 24px; 
     text-align: center; 
     box-shadow: var(--shadow); 
     flex: 1;
-    min-width: 260px; 
-    max-width: 300px;
+    min-width: 280px; /* Sapat na lapad para sa email */
+    max-width: 320px;
     transition: var(--transition);
     border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .contact-card:hover {
@@ -132,23 +138,25 @@ h1, h3, h4 { font-family: 'Playfair Display', serif; }
 }
 
 .contact-card .icon { 
-    font-size: 2rem; 
+    font-size: 1.8rem; 
     display: block; 
-    margin-bottom: 12px; 
+    margin-bottom: 15px; 
 }
 
 .contact-card p {
+    font-size: 0.95rem; /* Slightly smaller to fit long emails */
     font-weight: 500;
-    word-break: break-word;
     color: var(--text-main);
+    word-wrap: break-word; /* Pinipilit ang text na mag-wrap sa loob */
+    overflow-wrap: break-word;
 }
 
 /* FOOTER */
 footer { 
-    padding: 80px 0 40px; 
+    padding: 60px 0 40px; 
     text-align: center; 
     color: var(--text-light);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 /* ANIMATIONS */
@@ -156,9 +164,8 @@ footer {
 @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
 /* MOBILE RESPONSIVE */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .hero-name { font-size: 2.5rem; }
     .section-heading { font-size: 1.8rem; }
-    .glass-card, .project-card, .contact-card { padding: 24px; }
-    .hero { height: auto; padding: 100px 20px; }
+    .contact-card { min-width: 100%; max-width: 100%; } /* Full width sa mobile */
 }
