@@ -1,8 +1,8 @@
 /* DESIGN VARIABLES */
 :root {
-    --primary: #9370DB; /* Medium Orchid / Soft Purple */
-    --accent: #E6E6FA; /* Lavender */
-    --dark: #4B0082; /* Indigo / Dark Purple */
+    --primary: #9370DB;
+    --accent: #E6E6FA;
+    --dark: #4B0082;
     --white: #ffffff;
     --bg-light: #FDFBFF;
     --text-main: #4a4a4a;
@@ -24,7 +24,7 @@ body {
 
 .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
 
-/* REFINED TYPOGRAPHY */
+/* TYPOGRAPHY */
 h1, h3, h4 { font-family: 'Playfair Display', serif; }
 .section-heading {
     font-size: 2.2rem;
@@ -43,7 +43,6 @@ h1, h3, h4 { font-family: 'Playfair Display', serif; }
     background: radial-gradient(circle at top right, #f8f0ff, #ffffff);
     padding: 20px;
 }
-
 .hero-name { font-size: 3.2rem; color: var(--dark); margin-bottom: 8px; letter-spacing: -1px; }
 .hero-title { font-weight: 400; color: var(--primary); font-size: 1.4rem; margin-bottom: 24px; }
 .hero-intro { max-width: 550px; margin: 0 auto 32px; font-size: 1.05rem; color: var(--text-light); }
@@ -72,7 +71,7 @@ h1, h3, h4 { font-family: 'Playfair Display', serif; }
     border: 1px solid rgba(147, 112, 219, 0.05);
 }
 
-/* SKILL TAGS */
+/* SKILLS */
 .skill-cloud { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
 .skill-tag {
     background: var(--white);
@@ -80,84 +79,56 @@ h1, h3, h4 { font-family: 'Playfair Display', serif; }
     padding: 10px 24px;
     border-radius: 100px;
     font-weight: 500;
-    border: 1px solid var(--lavender);
+    border: 1px solid var(--accent);
     transition: var(--transition);
 }
-.skill-tag:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.skill-tag:hover { background: var(--primary); color: white; }
+
+/* PROJECTS GRID LAYOUT */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
 
 /* PROJECT CARD */
 .project-card {
-    max-width: 750px;
-    margin: 0 auto;
     background: white;
     border-radius: 24px;
     padding: 40px;
     box-shadow: var(--shadow);
     transition: var(--transition);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid transparent;
+}
+.project-card.highlight {
+    border: 2px solid var(--primary);
+    background: linear-gradient(to bottom, #ffffff, #fcfaff);
 }
 .project-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(147, 112, 219, 0.15); }
 
 .project-content h4 { font-size: 1.8rem; margin-bottom: 8px; color: var(--dark); }
-.badge { font-size: 0.75rem; background: var(--accent); color: var(--primary); padding: 4px 12px; border-radius: 4px; font-weight: 600; }
-.project-content p { margin: 20px 0; }
+.badge { font-size: 0.75rem; background: var(--accent); color: var(--primary); padding: 6px 14px; border-radius: 6px; font-weight: 600; margin-bottom: 15px; display: inline-block; }
+.project-content p { margin: 20px 0; font-size: 0.95rem; color: var(--text-light); flex-grow: 1; }
 .live-demo-link { color: var(--primary); text-decoration: none; font-weight: 600; border-bottom: 2px solid transparent; transition: var(--transition); }
 .live-demo-link:hover { border-bottom: 2px solid var(--primary); }
 
-/* CONTACT SECTION - FIXED ALIGNMENT & RESPONSIVE TEXT */
-.contact-grid { 
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center; 
-    align-items: stretch;
-    gap: 24px; 
-    margin: 30px auto;
-    max-width: 100%;
-}
-
-.contact-card { 
-    background: white; 
-    padding: 35px 20px; 
-    border-radius: 24px; 
-    text-align: center; 
-    box-shadow: var(--shadow); 
-    flex: 1;
-    min-width: 280px; /* Sapat na lapad para sa email */
-    max-width: 320px;
+/* CONTACT */
+.contact-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; margin: 30px auto; }
+.contact-card {
+    background: white; padding: 35px 20px; border-radius: 24px; text-align: center;
+    box-shadow: var(--shadow); flex: 1; min-width: 280px; max-width: 320px;
     transition: var(--transition);
-    border: 1px solid transparent;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
-
-.contact-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--accent);
-    box-shadow: 0 15px 35px rgba(147, 112, 219, 0.15);
-}
-
-.contact-card .icon { 
-    font-size: 1.8rem; 
-    display: block; 
-    margin-bottom: 15px; 
-}
-
-.contact-card p {
-    font-size: 0.95rem; /* Slightly smaller to fit long emails */
-    font-weight: 500;
-    color: var(--text-main);
-    word-wrap: break-word; /* Pinipilit ang text na mag-wrap sa loob */
-    overflow-wrap: break-word;
-}
+.contact-card:hover { transform: translateY(-8px); border-color: var(--accent); }
+.contact-card .icon { font-size: 1.8rem; display: block; margin-bottom: 15px; }
 
 /* FOOTER */
-footer { 
-    padding: 60px 0 40px; 
-    text-align: center; 
-    color: var(--text-light);
-    font-size: 0.9rem;
-}
+footer { padding: 60px 0 40px; text-align: center; color: var(--text-light); font-size: 0.9rem; }
 
 /* ANIMATIONS */
 .fade-in { animation: fadeIn 1.2s ease-out; }
@@ -165,7 +136,6 @@ footer {
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
+    .projects-grid { grid-template-columns: 1fr; }
     .hero-name { font-size: 2.5rem; }
-    .section-heading { font-size: 1.8rem; }
-    .contact-card { min-width: 100%; max-width: 100%; } /* Full width sa mobile */
 }
