@@ -1,147 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Andrea Garcia | Web Developer Portfolio</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero-content fade-in">
-      <h1 class="hero-name">Andrea Garcia</h1>
-      <h2 class="hero-title">Student Web Developer & Programmer</h2>
-      <p class="hero-intro">
-        I design and build functional, aesthetic, and real-world websites —
-        including live ordering systems that help small businesses grow.
-      </p>
+<header class="hero">
+  <div class="hero-content fade-in">
+    <h1 class="hero-name">Andrea Garcia</h1>
+    <h2 class="hero-title">Web Developer • Ordering Systems Specialist</h2>
+    <p class="hero-intro">
+      I build real, working websites for cafés and food businesses —
+      complete with ordering systems, checkout forms, and email notifications.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#contact" class="btn btn-outline">Contact Me</a>
+    </div>
+  </div>
+</header>
 
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View My Projects</a>
-        <a href="#contact" class="btn btn-outline">Contact Me</a>
+<main class="container">
+
+<!-- ABOUT -->
+<section class="section">
+  <h3 class="section-heading">About Me</h3>
+  <div class="glass-card fade-in">
+    <p>
+      I’m a student and self-taught web developer specializing in food and café
+      websites with real ordering functionality. I focus on clean UI,
+      responsive layouts, and systems that actually work in real businesses.
+    </p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section">
+  <h3 class="section-heading">Skills</h3>
+  <div class="skill-cloud fade-in">
+    <span class="skill-tag">HTML</span>
+    <span class="skill-tag">CSS</span>
+    <span class="skill-tag">JavaScript</span>
+    <span class="skill-tag">Formspree Integration</span>
+    <span class="skill-tag">Responsive Design</span>
+    <span class="skill-tag">GitHub Pages</span>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <h3 class="section-heading">Featured Projects ⭐</h3>
+
+  <div class="projects-grid">
+
+    <!-- CLOUDY CUP -->
+    <div class="project-card highlight fade-in">
+      <div class="project-content">
+        <h4>Cloudy Cup ☁️</h4>
+        <span class="badge featured">⭐ FEATURED PROJECT</span>
+        <p>
+          A modern milk tea ordering website with aesthetic branding,
+          category sections, quantity controls, and real order receiving via email.
+          Designed for small beverage businesses.
+        </p>
+        <a href="https://dreamediaenterprise-tech.github.io/cloudy-cup/"
+           target="_blank"
+           class="live-demo-link">
+          View Live Website →
+        </a>
       </div>
     </div>
-  </header>
 
-  <main class="container">
-
-    <!-- ABOUT -->
-    <section class="section">
-      <h3 class="section-heading">About Me</h3>
-      <div class="glass-card fade-in">
+    <!-- ANDEMAR CAFE -->
+    <div class="project-card fade-in">
+      <div class="project-content">
+        <h4>Andemar Café ☕</h4>
+        <span class="badge">Coffee Ordering System</span>
         <p>
-          I am a student and self-taught developer who focuses on building
-          real, working websites — not just designs.  
-          My projects include online menus, ordering systems, and business-ready
-          websites deployed live on GitHub Pages.
+          A full café ordering website featuring product categories,
+          quantity buttons, checkout form, COD / GCash options,
+          and automatic email order notifications.
         </p>
+        <a href="https://dreamediaenterprise-tech.github.io/andemar-cafe./"
+           target="_blank"
+           class="live-demo-link">
+          View Live Website →
+        </a>
       </div>
-    </section>
+    </div>
 
-    <!-- SKILLS -->
-    <section class="section">
-      <h3 class="section-heading">Technical Skills</h3>
-      <div class="skill-cloud fade-in">
-        <span class="skill-tag">HTML5</span>
-        <span class="skill-tag">CSS3</span>
-        <span class="skill-tag">JavaScript</span>
-        <span class="skill-tag">Formspree Integration</span>
-        <span class="skill-tag">GitHub Pages</span>
-        <span class="skill-tag">Responsive Design</span>
-        <span class="skill-tag">UI / UX Design</span>
+    <!-- ANDEMAR CAKES -->
+    <div class="project-card fade-in">
+      <div class="project-content">
+        <h4>Andemar Cakes 🎂</h4>
+        <span class="badge">Bakery Ordering Website</span>
+        <p>
+          A bakery website with categorized cake menus,
+          quantity selection, order summary, and email-based checkout.
+        </p>
+        <a href="https://dreamediaenterprise-tech.github.io/andemar-cakes/"
+           target="_blank"
+           class="live-demo-link">
+          View Live Website →
+        </a>
       </div>
-    </section>
+    </div>
 
-    <!-- PROJECTS -->
-    <section class="section" id="projects">
-      <h3 class="section-heading">Featured Projects ⭐</h3>
-
-      <div class="projects-grid">
-
-        <!-- FEATURED -->
-        <div class="project-card highlight fade-in">
-          <span class="featured-ribbon">FEATURED</span>
-          <h4>Andemar Café</h4>
-          <span class="badge">Live Coffee Ordering Website</span>
-          <p>
-            A full coffee shop ordering system with real-time order submission,
-            quantity controls, payment selection (COD / GCash),
-            and email integration using Formspree.
-          </p>
-          <a href="https://dreamediaenterprise-tech.github.io/andemar-cafe./" target="_blank" class="live-demo-link">
-            View Live Website →
-          </a>
-        </div>
-
-        <div class="project-card fade-in">
-          <h4>Andemar Cakes</h4>
-          <span class="badge">Online Bakery Ordering System</span>
-          <p>
-            A bakery website featuring cake categories, cart system,
-            automatic order summary, and live order delivery via email.
-          </p>
-          <a href="https://dreamediaenterprise-tech.github.io/andemar-cakes/" target="_blank" class="live-demo-link">
-            View Live Website →
-          </a>
-        </div>
-
-        <div class="project-card fade-in">
-          <h4>Cloudy Cup</h4>
-          <span class="badge">Milk Tea Menu & Ordering Website</span>
-          <p>
-            A modern milk tea menu with aesthetic branding, category tabs,
-            quantity buttons, cloud-themed design, and real order receiving.
-          </p>
-          <a href="#" class="live-demo-link">
-            Live Website (Coming Soon) →
-          </a>
-        </div>
-
-        <div class="project-card fade-in">
-          <h4>Mina’s Menu</h4>
-          <span class="badge">Digital Food Menu</span>
-          <p>
-            A simple and responsive food menu website built for small businesses,
-            designed for easy browsing and accessibility.
-          </p>
-          <a href="https://dreamediaenterprise-tech.github.io/minamenu./" target="_blank" class="live-demo-link">
-            View Live Website →
-          </a>
-        </div>
-
+    <!-- MINA MENU -->
+    <div class="project-card fade-in">
+      <div class="project-content">
+        <h4>Mina’s Menu 🍽</h4>
+        <span class="badge">Digital Food Menu</span>
+        <p>
+          A simple and responsive food menu website designed
+          for small restaurants and home-based food sellers.
+        </p>
+        <a href="https://dreamediaenterprise-tech.github.io/minamenu./"
+           target="_blank"
+           class="live-demo-link">
+          View Live Website →
+        </a>
       </div>
-    </section>
+    </div>
 
-    <!-- CONTACT -->
-    <section class="section" id="contact">
-      <h3 class="section-heading">Get in Touch</h3>
+  </div>
+</section>
 
-      <div class="contact-grid fade-in">
-        <div class="contact-card">
-          <span class="icon">📞</span>
-          <p>+63 992 944 0921</p>
-        </div>
-        <div class="contact-card">
-          <span class="icon">✉️</span>
-          <p>dreamedia.enterprise@gmail.com</p>
-        </div>
-        <div class="contact-card">
-          <span class="icon">👤</span>
-          <p>Andrea Garcia</p>
-        </div>
-      </div>
-    </section>
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <h3 class="section-heading">Contact</h3>
+  <div class="contact-grid fade-in">
+    <div class="contact-card">📞 +63 992 944 0921</div>
+    <div class="contact-card">✉️ dreamedia.enterprise@gmail.com</div>
+    <div class="contact-card">👤 Andrea Garcia</div>
+  </div>
+</section>
 
-  </main>
+</main>
 
-  <footer class="footer">
-    <p>Crafted with 💜 by <strong>Andrea Garcia</strong></p>
-  </footer>
+<footer class="footer">
+  <p>Built with 💜 by Andrea Garcia</p>
+</footer>
 
 </body>
 </html>
