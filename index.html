@@ -3,173 +3,342 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Andrea Garcia | Web Developer</title>
+  <title>Andrea Garcia | Websites for Small Businesses</title>
+
+  <!-- SEO -->
+  <meta name="description" content="I build mobile-first websites for small businesses — QR menus, ordering pages, and simple business sites. Clean design, fast experience, client-ready demos."/>
+  <meta name="theme-color" content="#0e0f14"/>
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- TOP NAV -->
+<div class="topNav">
+  <a class="navBrand" href="#top">Andrea Garcia</a>
+  <nav class="navLinks">
+    <a href="#projects">Projects</a>
+    <a href="#services">Services</a>
+    <a href="#packages">Packages</a>
+    <a href="#contact" class="navCta">Contact</a>
+  </nav>
+</div>
+
 <!-- HERO -->
-<header class="hero">
+<header class="hero" id="top">
   <div class="hero-content">
+    <p class="eyebrow">Websites for cafés, restaurants & service businesses</p>
+
     <h1 class="hero-name">Andrea Garcia</h1>
-    <h2 class="hero-title">Web Developer</h2>
+    <h2 class="hero-title">Front-end Website Builder</h2>
+
     <p class="hero-intro">
-      I build real, functional websites for businesses — from online ordering systems
-      to SaaS-style support platforms.
+      I build <strong>mobile-first</strong> websites that look premium and work in real life —
+      <strong>QR menus</strong>, <strong>ordering pages</strong>, and simple business sites with inquiry forms.
     </p>
+
+    <div class="hero-kpis">
+      <div class="kpi">
+        <div class="kpiNum">Fast</div>
+        <div class="kpiLabel">Mobile-friendly UX</div>
+      </div>
+      <div class="kpi">
+        <div class="kpiNum">Clean</div>
+        <div class="kpiLabel">Premium visuals</div>
+      </div>
+      <div class="kpi">
+        <div class="kpiNum">Ready</div>
+        <div class="kpiLabel">Live demo delivery</div>
+      </div>
+    </div>
+
     <div class="hero-actions">
       <a href="#projects" class="btn btn-primary">View Projects</a>
-      <a href="#contact" class="btn btn-outline">Contact Me</a>
+      <a href="#packages" class="btn btn-outline">See Packages</a>
     </div>
+
+    <p class="hero-note">
+      Want a demo that matches your business? Message me and I’ll send <strong>one best-fit demo link</strong>.
+    </p>
   </div>
 </header>
 
 <main class="container">
 
-<!-- ABOUT -->
-<section class="section">
-  <h3 class="section-heading">About</h3>
-  <div class="glass-card">
-    <p>
-      I specialize in building practical, real-world websites that businesses can
-      actually use. My work focuses on clean design, mobile responsiveness, and
-      functional systems such as ordering flows, booking inquiries, and support forms.
-    </p>
-  </div>
-</section>
-
-<!-- FEATURED PROJECTS -->
-<section class="section" id="projects">
-  <h3 class="section-heading">Featured Projects</h3>
-
-  <div class="projects-grid">
-
-    <div class="project-card highlight">
-      <h4>Serviqo Support</h4>
-      <span class="badge featured">SaaS / Help Center</span>
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <h3 class="section-heading">About</h3>
+    <div class="glass-card">
       <p>
-        AI-styled support and help center website with real ticket submission
-        and email receiving.
+        I specialize in practical, real-world websites businesses can actually use.
+        My focus is clean design, mobile responsiveness, and functional flows like
+        <strong>orders</strong>, <strong>booking inquiries</strong>, and <strong>support forms</strong>.
       </p>
-      <a href="https://dreamediaenterprise-tech.github.io/Serviqo-Support-/" target="_blank" class="live-demo-link">
-        Live Demo →
-      </a>
+
+      <div class="miniRow">
+        <span class="pill">Mobile-first</span>
+        <span class="pill">Clean UI</span>
+        <span class="pill">Fast delivery</span>
+        <span class="pill">Client-ready demos</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS -->
+  <section class="section" id="projects">
+    <h3 class="section-heading">Featured Projects</h3>
+
+    <div class="projects-grid">
+
+      <article class="project-card highlight">
+        <div class="cardTop">
+          <h4>Serviqo Support</h4>
+          <span class="badge featured">SaaS / Help Center</span>
+        </div>
+        <p class="muted">
+          AI-styled support/help center with real ticket submission and email receiving.
+        </p>
+        <div class="cardActions">
+          <a href="https://dreamediaenterprise-tech.github.io/Serviqo-Support-/" target="_blank" rel="noopener noreferrer" class="live-demo-link">
+            Live Demo →
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="cardTop">
+          <h4>AG Café</h4>
+          <span class="badge">Ordering System</span>
+        </div>
+        <p class="muted">
+          Café ordering site with menu categories, add-ons, quantity controls, and order submission.
+        </p>
+        <div class="cardActions">
+          <a href="https://dreamediaenterprise-tech.github.io/AG-CAFE/" target="_blank" rel="noopener noreferrer" class="live-demo-link">
+            Live Demo →
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="cardTop">
+          <h4>Auréa Beauty Atelier</h4>
+          <span class="badge">Business Website</span>
+        </div>
+        <p class="muted">
+          Luxury salon website with booking inquiry form and premium visual layout.
+        </p>
+        <div class="cardActions">
+          <a href="https://dreamediaenterprise-tech.github.io/aurea-beauty-atelier/" target="_blank" rel="noopener noreferrer" class="live-demo-link">
+            Live Demo →
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="cardTop">
+          <h4>Midnight Grill PH</h4>
+          <span class="badge">Restaurant Ordering</span>
+        </div>
+        <p class="muted">
+          Categorized menu + cart system with email-based order receiving.
+        </p>
+        <div class="cardActions">
+          <a href="https://dreamediaenterprise-tech.github.io/midnight-grill-ph/" target="_blank" rel="noopener noreferrer" class="live-demo-link">
+            Live Demo →
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- MORE PROJECTS -->
+  <section class="section">
+    <h3 class="section-heading">More Projects</h3>
+
+    <div class="projects-grid">
+      <article class="project-card">
+        <div class="cardTop">
+          <h4>Cloudy Cup</h4>
+          <span class="badge">Ordering</span>
+        </div>
+        <p class="muted">Milk tea ordering website with interactive menu and checkout flow.</p>
+        <div class="cardActions">
+          <a href="https://dreamediaenterprise-tech.github.io/cloudy-cup/" target="_blank" rel="noopener noreferrer" class="live-demo-link">View →</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="cardTop">
+          <h4>Andemar Café</h4>
+          <span class="badge">Café</span>
+        </div>
+        <p class="muted">Café ordering website with responsive design and order summary.</p>
+        <div class="cardActions">
+          <a href="https://dreamediaenterprise-tech.github.io/andemar-cafe./" target="_blank" rel="noopener noreferrer" class="live-demo-link">View →</a>
+        </div>
+        <p class="tinyWarn">Note: your link has a trailing dot in the URL — fix this in your repo name.</p>
+      </article>
+
+      <article class="project-card">
+        <div class="cardTop">
+          <h4>Andemar Cakes</h4>
+          <span class="badge">Shop</span>
+        </div>
+        <p class="muted">Cake shop website with categorized products and inquiry form.</p>
+        <div class="cardActions">
+          <a href="https://dreamediaenterprise-tech.github.io/andemar-cakes/" target="_blank" rel="noopener noreferrer" class="live-demo-link">View →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <h3 class="section-heading">What I Build</h3>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <h4>Business Websites</h4>
+        <p class="muted">Professional one-page or multi-section sites for services, salons, clinics, and brands.</p>
+        <ul class="bullets">
+          <li>Home • Services • Gallery</li>
+          <li>Location • Hours • Links</li>
+          <li>Inquiry/booking form</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <h4>QR Menus & Ordering</h4>
+        <p class="muted">Menus, add-ons, quantity controls, cart/summary, and order sending via email/form.</p>
+        <ul class="bullets">
+          <li>Mobile-first menu layout</li>
+          <li>Clear order flow</li>
+          <li>Client-ready demo link</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <h4>Help Center & Support</h4>
+        <p class="muted">SaaS-style support layout with ticket submission and inquiry systems.</p>
+        <ul class="bullets">
+          <li>FAQ + Categories</li>
+          <li>Ticket form</li>
+          <li>Email receiving</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section class="section" id="packages">
+    <h3 class="section-heading">Packages</h3>
+
+    <div class="projects-grid">
+      <div class="project-card priceCard">
+        <div class="priceTop">
+          <h4>Starter</h4>
+          <span class="price">₱999</span>
+        </div>
+        <p class="muted">Simple QR menu / business one-page for quick online presence.</p>
+        <ul class="bullets">
+          <li>1 page layout</li>
+          <li>Basic branding (colors + text)</li>
+          <li>1 revision</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline btnFull">Get Starter</a>
+      </div>
+
+      <div class="project-card priceCard highlight">
+        <div class="priceTop">
+          <h4>Standard</h4>
+          <span class="price">₱1,999</span>
+        </div>
+        <p class="muted">Best value: menu + order/inquiry flow that’s easy on mobile.</p>
+        <ul class="bullets">
+          <li>Menu categories</li>
+          <li>Order/Inquire form (email receiving)</li>
+          <li>2 revisions</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary btnFull">Get Standard</a>
+      </div>
+
+      <div class="project-card priceCard">
+        <div class="priceTop">
+          <h4>Premium</h4>
+          <span class="price">₱2,999</span>
+        </div>
+        <p class="muted">More sections + stronger branding for a premium business look.</p>
+        <ul class="bullets">
+          <li>Gallery / highlights</li>
+          <li>Map, hours, CTA buttons</li>
+          <li>3 revisions + 1 small update (7 days)</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline btnFull">Get Premium</a>
+      </div>
     </div>
 
-    <div class="project-card">
-      <h4>AG Café</h4>
-      <span class="badge">Ordering System</span>
-      <p>
-        Premium café ordering website with full menu, add-ons, quantity controls,
-        and real order submission.
+    <div class="glass-card miniCard">
+      <h4 class="miniTitle">Process</h4>
+      <ol class="steps">
+        <li><strong>Send details:</strong> logo/name/menu/services + contact info</li>
+        <li><strong>Build:</strong> I create the first version and send you a live demo link</li>
+        <li><strong>Revisions:</strong> we polish the layout + content</li>
+        <li><strong>Launch:</strong> publish + final handover</li>
+      </ol>
+      <p class="tinyWarn">Tip: Use 50% downpayment before full customization (to protect your time).</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <h3 class="section-heading">Contact</h3>
+
+    <div class="glass-card contactCard">
+      <p class="contact-text">
+        Interested in working together? Let’s build something functional and professional.
       </p>
-      <a href="https://dreamediaenterprise-tech.github.io/AG-CAFE/" target="_blank" class="live-demo-link">
-        Live Demo →
-      </a>
-    </div>
 
-    <div class="project-card">
-      <h4>Auréa Beauty Atelier</h4>
-      <span class="badge">Business Website</span>
-      <p>
-        Luxury beauty salon website with booking inquiry form
-        and premium visual layout.
+      <div class="contactRow">
+        <a class="btn btn-primary" href="mailto:dreamedia.enterprise@gmail.com">Email Me</a>
+        <button class="btn btn-outline" id="copyEmailBtn" type="button">Copy Email</button>
+      </div>
+
+      <p class="contact-email">
+        📧 <span id="emailText">dreamedia.enterprise@gmail.com</span>
       </p>
-      <a href="https://dreamediaenterprise-tech.github.io/aurea-beauty-atelier/" target="_blank" class="live-demo-link">
-        Live Demo →
-      </a>
-    </div>
 
-    <div class="project-card">
-      <h4>Midnight Grill PH</h4>
-      <span class="badge">Restaurant Ordering</span>
-      <p>
-        Restaurant ordering website featuring categorized menu,
-        cart system, and email-based order receiving.
+      <p class="tinyWarn">
+        Tell me your business type (café/grill/beauty/service) and I’ll send one best-fit demo link.
       </p>
-      <a href="https://dreamediaenterprise-tech.github.io/midnight-grill-ph/" target="_blank" class="live-demo-link">
-        Live Demo →
-      </a>
     </div>
-
-  </div>
-</section>
-
-<!-- MORE PROJECTS -->
-<section class="section">
-  <h3 class="section-heading">More Projects</h3>
-
-  <div class="projects-grid">
-
-    <div class="project-card">
-      <h4>Cloudy Cup</h4>
-      <p>Milk tea ordering website with interactive menu and checkout flow.</p>
-      <a href="https://dreamediaenterprise-tech.github.io/cloudy-cup/" target="_blank" class="live-demo-link">
-        View →
-      </a>
-    </div>
-
-    <div class="project-card">
-      <h4>Andemar Café</h4>
-      <p>Café ordering website with responsive design and order summary.</p>
-      <a href="https://dreamediaenterprise-tech.github.io/andemar-cafe./" target="_blank" class="live-demo-link">
-        View →
-      </a>
-    </div>
-
-    <div class="project-card">
-      <h4>Andemar Cakes</h4>
-      <p>Cake shop website with categorized products and inquiry form.</p>
-      <a href="https://dreamediaenterprise-tech.github.io/andemar-cakes/" target="_blank" class="live-demo-link">
-        View →
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="section">
-  <h3 class="section-heading">What I Build</h3>
-
-  <div class="projects-grid">
-    <div class="project-card">
-      <h4>Business Websites</h4>
-      <p>Professional websites for services, salons, clinics, and brands.</p>
-    </div>
-    <div class="project-card">
-      <h4>Online Ordering Systems</h4>
-      <p>Menus, carts, checkout flows, and real email order receiving.</p>
-    </div>
-    <div class="project-card">
-      <h4>Help Center & Support Sites</h4>
-      <p>SaaS-style support platforms with ticket and inquiry systems.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="section" id="contact">
-  <h3 class="section-heading">Contact</h3>
-
-  <div class="glass-card">
-    <p class="contact-text">
-      Interested in working together?  
-      Let’s build something functional and professional.
-    </p>
-    <p class="contact-email">
-      📧 dreamedia.enterprise@gmail.com
-    </p>
-  </div>
-</section>
+  </section>
 
 </main>
 
 <footer class="footer">
-  <p>© 2025 Andrea Garcia — Web Developer</p>
+  <p>© <span id="year"></span> Andrea Garcia</p>
 </footer>
+
+<script>
+  // Auto year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Copy email
+  const btn = document.getElementById('copyEmailBtn');
+  const email = document.getElementById('emailText').textContent.trim();
+  btn.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+      btn.textContent = "Copied!";
+      setTimeout(() => btn.textContent = "Copy Email", 1200);
+    } catch (e) {
+      window.location.href = "mailto:" + email;
+    }
+  });
+</script>
 
 </body>
 </html>
