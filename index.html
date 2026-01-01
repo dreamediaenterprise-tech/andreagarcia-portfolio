@@ -176,7 +176,6 @@
         </div>
         <p class="muted">Café ordering website with responsive design and order summary.</p>
         <div class="cardActions">
-          <!-- FIXED LINK (no dot) -->
           <a href="https://dreamediaenterprise-tech.github.io/andemar-cafe/" target="_blank" rel="noopener noreferrer" class="live-demo-link">View →</a>
         </div>
       </article>
@@ -188,7 +187,6 @@
         </div>
         <p class="muted">Digital menu website built for quick viewing and mobile ordering vibe.</p>
         <div class="cardActions">
-          <!-- FIXED LINK (no dot) -->
           <a href="https://dreamediaenterprise-tech.github.io/minamenu/" target="_blank" rel="noopener noreferrer" class="live-demo-link">View →</a>
         </div>
       </article>
@@ -291,17 +289,44 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- CONTACT (WITH FORMSPREE) -->
   <section class="section" id="contact">
     <h3 class="section-heading">Contact</h3>
 
     <div class="glass-card contactCard">
       <p class="contact-text">
-        Interested in working together? Let’s build something functional and professional.
+        Interested in working together? Send a message below.
       </p>
 
+      <!-- FORM -->
+      <form id="contactForm" action="https://formspree.io/f/mvzggwja" method="POST" class="contactForm">
+        <!-- optional subject -->
+        <input type="hidden" name="_subject" value="New inquiry from Andrea Portfolio" />
+
+        <!-- spam trap (leave empty) -->
+        <input class="honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+
+        <div class="formRow">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="_replyto" placeholder="Your email" required>
+        </div>
+
+        <textarea name="message" rows="5" placeholder="Tell me your business type (café/grill/beauty/service) + what you need..." required></textarea>
+
+        <button class="btn btn-primary btnFull" type="submit" id="sendBtn">Send Message</button>
+
+        <p class="formHint">
+          You’ll receive a reply through email. Please double-check your email before sending.
+        </p>
+
+        <!-- Status messages -->
+        <div id="formStatus" class="status hidden"></div>
+      </form>
+
+      <p class="orLine">or</p>
+
       <div class="contactRow">
-        <a class="btn btn-primary" href="mailto:dreamedia.enterprise@gmail.com">Email Me</a>
+        <a class="btn btn-outline" href="mailto:dreamedia.enterprise@gmail.com">Email Me</a>
         <button class="btn btn-outline" id="copyEmailBtn" type="button">Copy Email</button>
       </div>
 
@@ -310,7 +335,7 @@
       </p>
 
       <p class="tinyWarn">
-        Tell me your business type (café/grill/beauty/service) and I’ll send one best-fit demo link.
+        After you message: I’ll send one best-fit demo link, then we pick your package.
       </p>
     </div>
   </section>
@@ -326,15 +351,58 @@
   document.getElementById('year').textContent = new Date().getFullYear();
 
   // Copy email
-  const btn = document.getElementById('copyEmailBtn');
+  const copyBtn = document.getElementById('copyEmailBtn');
   const email = document.getElementById('emailText').textContent.trim();
-  btn.addEventListener('click', async () => {
+  copyBtn.addEventListener('click', async () => {
     try {
       await navigator.clipboard.writeText(email);
-      btn.textContent = "Copied!";
-      setTimeout(() => btn.textContent = "Copy Email", 1200);
+      copyBtn.textContent = "Copied!";
+      setTimeout(() => copyBtn.textContent = "Copy Email", 1200);
     } catch (e) {
       window.location.href = "mailto:" + email;
+    }
+  });
+
+  // Formspree AJAX submit (shows success message without leaving page)
+  const form = document.getElementById('contactForm');
+  const statusBox = document.getElementById('formStatus');
+  const sendBtn = document.getElementById('sendBtn');
+
+  function showStatus(type, msg){
+    statusBox.classList.remove('hidden', 'statusSuccess', 'statusError');
+    statusBox.classList.add(type === 'success' ? 'statusSuccess' : 'statusError');
+    statusBox.textContent = msg;
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // If honeypot filled, silently stop
+    const trap = form.querySelector('input[name="_gotcha"]');
+    if (trap && trap.value.trim() !== "") return;
+
+    sendBtn.disabled = true;
+    sendBtn.textContent = "Sending...";
+
+    try {
+      const formData = new FormData(form);
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { "Accept": "application/json" }
+      });
+
+      if (res.ok) {
+        form.reset();
+        showStatus('success', "✅ Sent! Thank you — I’ll reply soon.");
+      } else {
+        showStatus('error', "❌ Something went wrong. Please try again, or email me directly.");
+      }
+    } catch (err) {
+      showStatus('error', "❌ Network error. Please try again, or email me directly.");
+    } finally {
+      sendBtn.disabled = false;
+      sendBtn.textContent = "Send Message";
     }
   });
 </script>
