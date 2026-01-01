@@ -307,9 +307,7 @@ strong{ font-weight:600; }
 .steps li{ margin: 8px 0; }
 
 /* CONTACT */
-.contactCard{
-  text-align:center;
-}
+.contactCard{ text-align:center; }
 .contact-text{
   text-align:center;
   margin-bottom: 14px;
